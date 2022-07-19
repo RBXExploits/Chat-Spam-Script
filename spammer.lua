@@ -1,12 +1,13 @@
 local ChatSpam = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
-local topbar = Instance.new("Frame")
-local title = Instance.new("TextLabel")
 local cooldown = Instance.new("TextBox")
 local msg = Instance.new("TextBox")
 local start = Instance.new("TextButton")
+local topbar = Instance.new("Frame")
+local title = Instance.new("TextLabel")
 ChatSpam.Name = "ChatSpam"
-ChatSpam.Parent = game.CoreGui
+ChatSpam.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ChatSpam.Enabled = true
 ChatSpam.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.Name = "main"
 main.Parent = ChatSpam
@@ -15,23 +16,6 @@ main.BorderColor3 = Color3.fromRGB(255, 0, 0)
 main.BorderSizePixel = 3
 main.Position = UDim2.new(0.0386579335, 0, 0.0538555682, 0)
 main.Size = UDim2.new(0, 422, 0, 159)
-topbar.Name = "topbar"
-topbar.Parent = main
-topbar.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-topbar.BorderColor3 = Color3.fromRGB(255, 0, 0)
-topbar.BorderSizePixel = 0
-topbar.Position = UDim2.new(0, 0, -0.000326717593, 0)
-topbar.Size = UDim2.new(0, 421, 0, 27)
-title.Name = "title"
-title.Parent = topbar
-title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-title.BackgroundTransparency = 1.000
-title.Size = UDim2.new(0, 421, 0, 27)
-title.Font = Enum.Font.SciFi
-title.Text = "Chat Spam By : mov5#5020"
-title.TextColor3 = Color3.fromRGB(255, 255, 255)
-title.TextSize = 17.000
-title.TextWrapped = true
 cooldown.Name = "cooldown"
 cooldown.Parent = main
 cooldown.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
@@ -71,7 +55,36 @@ start.Font = Enum.Font.SourceSans
 start.Text = "Spam"
 start.TextColor3 = Color3.fromRGB(255, 255, 255)
 start.TextSize = 16.000
-local function YGWENW_fake_script() -- main.main 
+topbar.Name = "topbar"
+topbar.Parent = main
+topbar.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+topbar.BorderColor3 = Color3.fromRGB(255, 0, 0)
+topbar.BorderSizePixel = 0
+topbar.Position = UDim2.new(0, 0, -0.000326717593, 0)
+topbar.Size = UDim2.new(0, 421, 0, 27)
+title.Name = "title"
+title.Parent = topbar
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 1.000
+title.Size = UDim2.new(0, 421, 0, 27)
+title.Font = Enum.Font.SciFi
+title.Text = "Chat Spam By : mov5#5020"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextSize = 17.000
+title.TextWrapped = true
+local function GMZS_fake_script() -- start.txtlawl 
+	local script = Instance.new('LocalScript', start)
+
+	game:GetService("RunService").RenderStepped:Connect(function()
+		if msg.Text == '' then
+			
+		else
+			start.Text = 'Spam "'.. msg.Text.. '"'
+		end
+	end)
+end
+coroutine.wrap(GMZS_fake_script)()
+local function NAQLO_fake_script() -- main.main 
 	local script = Instance.new('LocalScript', main)
 
 	start.MouseButton1Click:Connect(function()
@@ -90,8 +103,8 @@ local function YGWENW_fake_script() -- main.main
 		end
 	end)
 end
-coroutine.wrap(YGWENW_fake_script)()
-local function YMAS_fake_script() -- ChatSpam.LocalScript 
+coroutine.wrap(NAQLO_fake_script)()
+local function BSTDLJT_fake_script() -- ChatSpam.LocalScript 
 	local script = Instance.new('LocalScript', ChatSpam)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -134,4 +147,4 @@ local function YMAS_fake_script() -- ChatSpam.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YMAS_fake_script)()
+coroutine.wrap(BSTDLJT_fake_script)()
